@@ -82,6 +82,7 @@
                         <name>listener</name>
                         <value>ru.yandex.qatools.allure.junit.AllureRunListener</value>
                     </property>
+                    
 					<systemProperties>
 						<property>
 							<name>allure.results.directory</name>
@@ -89,8 +90,7 @@
 						</property>
 						<property>
 							<name>allure.results.directory</name>
-							<value>C:\Users\mayank.bharshiv\.jenkins\workspace\Maven
-								Project\allure-results</value>
+							<value>C:\Users\mayank.bharshiv\.jenkins\workspace\Maven Project\java-maven-junit-helloworld-master\target\allure-results</value>
 						</property>
 					</systemProperties>
 				</configuration>
