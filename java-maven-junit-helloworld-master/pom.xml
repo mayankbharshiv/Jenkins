@@ -28,7 +28,7 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
 			<artifactId>allure-maven</artifactId>
@@ -79,10 +79,10 @@
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
 					</argLine>
 					<property>
-                        <name>listener</name>
-                        <value>ru.yandex.qatools.allure.junit.AllureRunListener</value>
-                    </property>
-                    
+						<name>listener</name>
+						<value>ru.yandex.qatools.allure.junit.AllureRunListener</value>
+					</property>
+
 					<systemProperties>
 						<property>
 							<name>allure.results.directory</name>
@@ -90,7 +90,8 @@
 						</property>
 						<property>
 							<name>allure.results.directory</name>
-							<value>C:\Users\mayank.bharshiv\.jenkins\workspace\Maven Project\java-maven-junit-helloworld-master\target\allure-results</value>
+							<value>C:\Users\mayank.bharshiv\.jenkins\workspace\Maven
+								Project\java-maven-junit-helloworld-master\target\allure-results</value>
 						</property>
 					</systemProperties>
 				</configuration>
@@ -131,6 +132,7 @@
 	</build>
 
 	<reporting>
+		<excludeDefaults>true</excludeDefaults>
 		<plugins>
 			<plugin>
 				<!-- JUnit code coverage. -->
@@ -138,7 +140,21 @@
 				<artifactId>cobertura-maven-plugin</artifactId>
 				<version>2.6</version>
 			</plugin>
+
+
+
+
+			<plugin>
+				<groupId>ru.yandex.qatools.allure</groupId>
+				<artifactId>allure-maven-plugin</artifactId>
+				<version>${allure.maven.version}</version>
+				<configuration>
+					<outputDirectory>target/allure-report</outputDirectory>
+				</configuration>
+			</plugin>
 		</plugins>
+
 	</reporting>
+
 
 </project>
